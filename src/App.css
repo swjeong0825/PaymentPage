@@ -37,23 +37,33 @@
   }
 }
 
-.organization {
-  padding: 10px;
-  text-align: left;
-  font-weight: bold;
-  clear: left;
+.App #intro{
+  padding-top: 3%;
+  font-size: 45px;
 }
 
-.organization li{
-  padding-right: 10px;
+.summary p {
   font-size: 30px;
-  display: block;
 }
 
-.organization p{
- display: inline; 
+.summary button {
+  width: 180px;
+  height: 130px;
+  padding: 20px;
 }
 
-.organization button{
-  height: 25px;  
+#creditCardSelect button{
+  width: 100px;
+  height: 60px;
+}
+
+.cardNumbers {
+  width: 5%;
+  margin-right: 0.5%;
+}
+
+.paymentMethod {
+  border-width: medium;
+  border-style: solid;
+  border-color:gainsboro;
 }

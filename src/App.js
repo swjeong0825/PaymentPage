@@ -3,51 +3,63 @@ import './App.css';
 import React, { useState } from "react"
 import Radium from "radium";
 import styled from "styled-components"
-import wiki_img from "./images/wiki.jpg"
+
+import PurchaseWithCreditCard from "./PurchaseBody/purchaseBody"
+import PurchaseWithPaypal from "./PurchaseWithPayPal/PurchaseWithPaypal"
+
+import creditCardIMG from "./images/creditCard.png"
+import PayPalIMG from "./images/PayPal.png"
+
+
 
 function App() {
-  const [button0_name, set_button0_name] = useState("Donate");
-  const toggle_donate_button = () =>{
-    if (button0_name === "Donate"){
-      set_button0_name("Donating");
-    } else {
-      set_button0_name("Donate")
+  let [credit_card_clicked, set_credit_card_clicked] = useState(false);
+  const [purchase_body, set_purchase_body] = useState(null);
+  const [credit_card_button_css, set_credit_card_button_css] = useState({marginRight: "1.5%"});
+  const [paypal_button_css, set_paypal_button_css] = useState({marginLeft: "1.5%"});
+
+  const toggle_purchase_option = () => {
+    if (credit_card_clicked){
+      set_credit_card_button_css({marginRight: "1.5%", borderWidth: "medium", borderColor: "black"});
+      set_paypal_button_css({marginLeft: "1.5%"});
+      set_purchase_body(<PurchaseWithCreditCard/>)
+
+    } else{
+      set_credit_card_button_css({marginRight: "1.5%"});
+      set_paypal_button_css({marginLeft: "1.5%", borderWidth: "medium", borderColor: "black"});
+      set_purchase_body(<PurchaseWithPaypal/>)
     }
   }
 
-
   return (
     <div className="App">
-      <h1>Project Name</h1>
-      <label>Search: </label><input type = "text"></input>
-      <ol style = {{listStyle: "none"}}>
-        <div className = "organization" >
-          <li id = "organization-0">
-            Wikipiedia 
-            <div style = {{display: "block"}}>
-              <button 
-                onClick = {toggle_donate_button}>
-                  {button0_name}
-              </button>
-              {" "}
-              <select style = {{width: "60px", height: "25px"}}>
-                <option value = "0">5%</option>
-                <option value = "1">10%</option>
-                <option value = "2">15%</option>
-                <option value = "3">20%</option>
-              </select>
-            </div>
-          </li>
-          <img style = {{verticalAlign: "middle", padding: "20px"}} src = {wiki_img} width = "150px"></img>
-          <p>Description</p>
-        </div>
-        <div className = "organization">
-          <li id = "organization-1">Khan Academy</li>
-        </div>
-        <div className = "organization">
-          <li id = "organization-2">#3 organization</li>
-        </div>
-      </ol>
+      <div className = "summary" style = {{paddingBottom: "3%"}}>
+        <h1 id = "intro">Complete Tour Donation</h1>
+        <p>Total Donation: [Price]</p>
+        <input
+          className = "paymentMethod"
+          type = "image"
+          src = {creditCardIMG}
+          onClick = {() => {
+            credit_card_clicked = true;
+            toggle_purchase_option();
+          }}
+          style = {credit_card_button_css}
+        >
+        </input>
+        <input
+          className = "paymentMethod"
+          type = "image"
+          src = {PayPalIMG}
+          onClick = {() => {
+            credit_card_clicked = false;
+            toggle_purchase_option();
+          }} 
+          style = {paypal_button_css}>
+        </input>
+      </div>
+      {purchase_body}
+
     </div>
   );
 }

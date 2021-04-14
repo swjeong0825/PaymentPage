@@ -1,0 +1,27 @@
+h1 {
+    text-align: center;
+}
+
+#intro{
+    padding-top: 5%;
+    font-size: 50px;
+}
+
+.summary p {
+    font-size: 30px;
+}
+
+.summary button {
+    width: 180px;
+    height: 130px;
+    padding: 20px;
+}
+
+#creditCardSelect button{
+    width: 100px;
+    height: 60px;
+}
+
+body div{
+    padding-top: 5%;
+}
