@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/PaymentPage/static/css/main.c3905481.chunk.css",
+    "main.js": "/PaymentPage/static/js/main.a98c4aa3.chunk.js",
+    "main.js.map": "/PaymentPage/static/js/main.a98c4aa3.chunk.js.map",
+    "runtime-main.js": "/PaymentPage/static/js/runtime-main.689ec75e.js",
+    "runtime-main.js.map": "/PaymentPage/static/js/runtime-main.689ec75e.js.map",
+    "static/js/2.8d1a7ef8.chunk.js": "/PaymentPage/static/js/2.8d1a7ef8.chunk.js",
+    "static/js/2.8d1a7ef8.chunk.js.map": "/PaymentPage/static/js/2.8d1a7ef8.chunk.js.map",
+    "static/js/3.dfe2d60b.chunk.js": "/PaymentPage/static/js/3.dfe2d60b.chunk.js",
+    "static/js/3.dfe2d60b.chunk.js.map": "/PaymentPage/static/js/3.dfe2d60b.chunk.js.map",
+    "index.html": "/PaymentPage/index.html",
+    "static/css/main.c3905481.chunk.css.map": "/PaymentPage/static/css/main.c3905481.chunk.css.map",
+    "static/js/2.8d1a7ef8.chunk.js.LICENSE.txt": "/PaymentPage/static/js/2.8d1a7ef8.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/PaymentPage/static/media/logo.6ce24c58.svg",
+    "static/media/visa.4b4756ba.png": "/PaymentPage/static/media/visa.4b4756ba.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.689ec75e.js",
+    "static/js/2.8d1a7ef8.chunk.js",
+    "static/css/main.c3905481.chunk.css",
+    "static/js/main.a98c4aa3.chunk.js"
+  ]
+}
